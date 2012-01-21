@@ -212,7 +212,7 @@ public class DataPreprocessor
 		List<String> tokens = LuceneUtil.tokenize(preprocessor, "", new BufferedReader(new FileReader(descriptor.documentLocation)));
 		for(String token : tokens)
 		{
-			pw.println(Joiner.on(" ").join(orientation.getCode(), descriptor.documentId, token));
+			pw.println(Joiner.on(" ").join( descriptor.documentId, token));
 		}
 	}
 	private static void dumpData( EnumMap<PoliticalOrientation, List<DocumentDescriptor>> partitions

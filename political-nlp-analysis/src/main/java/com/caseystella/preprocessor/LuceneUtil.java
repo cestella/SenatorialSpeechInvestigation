@@ -1,4 +1,4 @@
-package com.caseystella;
+package com.caseystella.preprocessor;
 
 import java.io.IOException;
 import java.io.Reader;

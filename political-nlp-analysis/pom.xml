@@ -31,5 +31,10 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+        <groupId>org.apache.lucene</groupId>
+        <artifactId>lucene-core</artifactId>
+        <version>3.5.0</version>
+    </dependency>
   </dependencies>
 </project>

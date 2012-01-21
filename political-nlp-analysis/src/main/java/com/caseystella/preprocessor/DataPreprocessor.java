@@ -1,18 +1,12 @@
 package com.caseystella.preprocessor;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.io.Reader;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.EnumMap;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.CommandLineParser;
@@ -20,13 +14,7 @@ import org.apache.commons.cli.OptionBuilder;
 import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
 import org.apache.commons.cli.PosixParser;
-import org.apache.lucene.analysis.Analyzer;
-import org.apache.lucene.analysis.LowerCaseTokenizer;
-import org.apache.lucene.analysis.PorterStemFilter;
-import org.apache.lucene.analysis.StopFilter;
-import org.apache.lucene.analysis.TokenStream;
 
-import com.google.common.base.CharMatcher;
 import com.google.common.base.Charsets;
 import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;
@@ -40,21 +28,12 @@ public class DataPreprocessor
 {
 	private static enum PoliticalOrientation
 	{
-		CONSERVATIVE((byte)0x0)
-	   ,MODERATE((byte)0x1)
-	   ,LIBERAL((byte)0x2)
+		CONSERVATIVE
+	   ,MODERATE
+	   ,LIBERAL
 	   ;
 	   
-	   private byte code;
-	   
-	   private PoliticalOrientation(byte code)
-	   {
-		   this.code = code;
-	   }
-	   public byte getCode()
-	   {
-		   return code;
-	   }
+	 
 	}
 	
 	private static class DocumentDescriptor
@@ -95,23 +74,23 @@ public class DataPreprocessor
 		
 	}
 	
-	private static class Preprocessor extends Analyzer
-	{
-		Set<String> stopwords = new HashSet<String>();
-		public Preprocessor(File stopwordsFile) throws IOException
-		{
-			for(String stopword : Files.readLines(stopwordsFile, Charsets.US_ASCII))
-			{
-				stopwords.add(stopword.toLowerCase());
-			}
-		}
-		
-		@Override
-		public TokenStream tokenStream(String arg0, Reader reader) {
-			
-			return new PorterStemFilter(new StopFilter(true, new LowerCaseTokenizer(reader), stopwords) );
-		}
-	}
+//	private static class Preprocessor extends Analyzer
+//	{
+//		Set<String> stopwords = new HashSet<String>();
+//		public Preprocessor(File stopwordsFile) throws IOException
+//		{
+//			for(String stopword : Files.readLines(stopwordsFile, Charsets.US_ASCII))
+//			{
+//				stopwords.add(stopword.toLowerCase());
+//			}
+//		}
+//		
+//		@Override
+//		public TokenStream tokenStream(String arg0, Reader reader) {
+//			
+//			return new PorterStemFilter(new StopFilter(true, new LowerCaseTokenizer(reader), stopwords) );
+//		}
+//	}
 	
 	
 	private static BiMap<String, Double> getIdealPointsMap(File idealPointsFile) throws IOException
@@ -155,8 +134,8 @@ public class DataPreprocessor
 	
 	private static EnumMap<PoliticalOrientation, List<DocumentDescriptor>> partitionDataDirectory( File dataDirectory
 																								, BiMap<String, Double> idealPointMap
-																								, double conservativeRightBoundary
-																								, double liberalLeftBoundary
+																								, double conservativeLeftBoundary
+																								, double liberalRightBoundary
 																								)
 	{
 		EnumMap<PoliticalOrientation, List<DocumentDescriptor>> partitions 
@@ -184,17 +163,17 @@ public class DataPreprocessor
 			
 			double idealPoint = idealPointMap.get(lastName);
 			
-			if(idealPoint < conservativeRightBoundary)
+			if(idealPoint < liberalRightBoundary)
 			{
-				partitions.get(PoliticalOrientation.CONSERVATIVE).add(descriptor);
+				partitions.get(PoliticalOrientation.LIBERAL).add(descriptor);
 			}
-			else if(idealPoint < liberalLeftBoundary)
+			else if(idealPoint < conservativeLeftBoundary)
 			{
 				partitions.get(PoliticalOrientation.MODERATE).add(descriptor);
 			}
 			else
 			{
-				partitions.get(PoliticalOrientation.LIBERAL).add(descriptor);
+				partitions.get(PoliticalOrientation.CONSERVATIVE).add(descriptor);
 			}
 		}
 		
@@ -203,29 +182,47 @@ public class DataPreprocessor
 	}
 	
 	
-	private static void dumpDocument( PrintWriter pw
-									, DocumentDescriptor descriptor
-									, Analyzer preprocessor
-									, PoliticalOrientation orientation
-									) throws FileNotFoundException
+	private static void dumpDocument( final PrintWriter pw
+									, final DocumentDescriptor descriptor
+									) throws IOException
 	{
-		List<String> tokens = LuceneUtil.tokenize(preprocessor, "", new BufferedReader(new FileReader(descriptor.documentLocation)));
-		for(String token : tokens)
-		{
-			pw.println(Joiner.on(" ").join( descriptor.documentId, token));
-		}
+		pw.println(Joiner.on("\t")
+						 .join( descriptor.documentId
+							  , Files.readLines( descriptor.documentLocation
+									  		   , Charsets.US_ASCII
+									  		   , new LineProcessor<String>()
+									  		   {
+								  					private StringBuffer buffer = new StringBuffer();
+								  					
+								  					@Override
+								  					public String getResult() {
+								  						return buffer.toString().trim();
+								  					}
+								  					@Override
+								  					public boolean processLine(String line)
+								  						throws IOException 
+								  					{
+								  						String normalizedString = line.replaceAll("\\s+", " ").trim();
+								  						buffer.append(normalizedString + " ");
+								  						return true;
+								  					}
+									  		   }
+									  		   )
+							  )
+				  );
+
 	}
+	
 	private static void dumpData( EnumMap<PoliticalOrientation, List<DocumentDescriptor>> partitions
-								, Analyzer preprocessor 
 								, File outputDir
-								) throws FileNotFoundException
+								) throws IOException
 	{
 		for(PoliticalOrientation orientation : PoliticalOrientation.values())
 		{
 			PrintWriter pw = new PrintWriter(new File(outputDir, orientation.toString()));
 			for(DocumentDescriptor descriptor : partitions.get(orientation))
 			{
-				dumpDocument(pw, descriptor, preprocessor, orientation);
+				dumpDocument(pw, descriptor);
 			}
 			pw.close();
 		}
@@ -256,20 +253,20 @@ public class DataPreprocessor
 							 );
 		}
 		{
-			options.addOption( OptionBuilder.withArgName("conservative_right_boundary")
+			options.addOption( OptionBuilder.withArgName("conservative_left_boundary")
 											.hasArg()
-											.withDescription("The conservative right boundary")
+											.withDescription("The conservative left boundary")
 											.isRequired()
-											.withLongOpt("conservative-right-boundary")
+											.withLongOpt("conservative-left-boundary")
 											.create("c")
 							 );
 		}
 		{
-			options.addOption( OptionBuilder.withArgName("liberal_left_boundary")
+			options.addOption( OptionBuilder.withArgName("liberal_right_boundary")
 											.hasArg()
-											.withDescription("The liberal left boundary")
+											.withDescription("The liberal right boundary")
 											.isRequired()
-											.withLongOpt("liberal-left-boundary")
+											.withLongOpt("liberal-right-boundary")
 											.create("l")
 							 );
 		}
@@ -282,15 +279,7 @@ public class DataPreprocessor
 											.create("p")
 							 );
 		}
-		{
-			options.addOption( OptionBuilder.withArgName("stopword_file")
-											.hasArg()
-											.withDescription("The stopword file")
-											.isRequired()
-											.withLongOpt("stopword-file")
-											.create("s")
-							 );
-		}
+		
 		
 		// parse the command line arguments
 	    CommandLine line = parser.parse( options, argv );
@@ -298,17 +287,17 @@ public class DataPreprocessor
 	    File inputDir = new File(line.getOptionValue("i"));
 	    File outputDir = new File(line.getOptionValue("o"));
 	    File idealPointsFile = new File(line.getOptionValue("p"));
-	    File stopwordFile = new File(line.getOptionValue("s"));
+	   
 	    
-	    double conservativeRightBoundary = Double.parseDouble(line.getOptionValue("c"));
+	    double conservativeLeftBoundary = Double.parseDouble(line.getOptionValue("c"));
 
-	    double liberalLeftBoundary = Double.parseDouble(line.getOptionValue("l"));
+	    double liberalRightBoundary = Double.parseDouble(line.getOptionValue("l"));
 	   
 	    BiMap<String, Double> idealPointsMap = getIdealPointsMap(idealPointsFile);
 	    EnumMap<PoliticalOrientation, List<DocumentDescriptor>> partitions
-	    	= partitionDataDirectory(inputDir, idealPointsMap, conservativeRightBoundary, liberalLeftBoundary);
+	    	= partitionDataDirectory(inputDir, idealPointsMap, liberalRightBoundary, conservativeLeftBoundary );
 	    
-	    dumpData(partitions, new Preprocessor(stopwordFile), outputDir);
+	    dumpData(partitions, outputDir);
 	    
 	}
 }

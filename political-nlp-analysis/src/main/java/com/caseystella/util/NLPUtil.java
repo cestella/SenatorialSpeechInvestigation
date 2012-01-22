@@ -32,7 +32,7 @@ public enum NLPUtil
 	}
 	private static final Pattern whitespacePattern = Pattern.compile("[ \t\r\n\\-]");
 	
-	public static double IDF(int N, int d)
+	public double IDF(int N, int d)
 	{
 		
 		return Math.log10( (N - d + 0.5) / (N + 0.5));

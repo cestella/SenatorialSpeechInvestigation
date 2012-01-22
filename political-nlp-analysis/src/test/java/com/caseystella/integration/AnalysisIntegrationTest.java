@@ -60,9 +60,9 @@ public class AnalysisIntegrationTest extends TestCase
     public void preprocessData() throws IOException
     {
     	
-    	DataPreprocessor.execute( new File("src/test/data/senate_speeches/")
+    	DataPreprocessor.execute( new File("src/main/data/senate_speeches/")
     							, new File("target/processed")
-    							, new File("src/test/data/ideal_points.csv")
+    							, new File("src/main/data/ideal_points.csv")
     							, LIBERAL_RIGHT_BOUNDARY
     							, CONSERVATIVE_LEFT_BOUNDARY
     							);
@@ -180,7 +180,7 @@ public class AnalysisIntegrationTest extends TestCase
 	    	JobConf conf = AnalysisJob.createJobConf( "target/processed/" + orientation
 	    											, DOCUMENT_TOTAL
 	    											, "target/output/" + orientation
-	    											, new File("src/test/data/stopwords.txt")
+	    											, new File("src/main/data/stopwords.txt")
 	    											);
 	    	//noone needs 100M of sort buffer for an integration test.
 	    	conf.set("io.sort.mb", "50");

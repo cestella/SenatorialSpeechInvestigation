@@ -19,6 +19,7 @@ This code is mostly an intellectual lark and a demonstration of NLP done using M
 #Usage
 ##Prerequisites
 To execute this, you must have:
+
 * A JDK installed
 * Maven 2 or higher installed
 
@@ -27,12 +28,15 @@ To generate the presentation from the Cleveland CHUG, you need latex
 
 ##To generate the full example
 From the command line, in the political-nlp-analysis directory, execute
+
      mvn integration-test
 
 You can then use the political-nlp-analysis/generate_top_words.sh script
 to generate the top words for a particular political orientation thusly:
+
      generate_top_words.sh {LIBERAL, MODERATE, CONSERVATIVE} <number of terms>
 
 You can reconstruct the density plot using the political-nlp-analysis/src/main/R/generate_histogram.sh script:
+
      generate_histogram.sh <path to ideal_points.csv>
 

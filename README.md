@@ -9,9 +9,32 @@ The purpose of the project is to take a dataset of around 1400 speeches from Sen
 * Preprocess using a Porter Stemmer and rank the tokenized terms by [Inverse Document Frequency](http://en.wikipedia.org/wiki/Okapi_BM25#IDF_Information_Theoretic_Interpretation)
 * Take the ranked terms and output the terms that are important in the corpus associated with one political orientation but not the others.
 
+##Partition
 The partition of the probability space is split into even thirds as can be seen here:
 
 ![density plot](https://github.com/cestella/CHUG-talk/raw/master/political-nlp-analysis/src/main/R/histogram.png "Density Plot")
+
+
+##Output
+The results, for the curious, are here:
+<table>
+<tr><td>LIBERAL</td><td>MODERATE</td><td>CONSERVATIVE</td></tr>
+<tr><td>market</td><td>produce</td><td>discuss</td></tr>
+<tr><td>power</td><td>commission</td><td>past</td></tr>
+<tr><td>institutions</td><td>strengthening</td><td>politics</td></tr>
+<tr><td>initiate</td><td>provisions</td><td>pointed</td></tr>
+<tr><td>implement</td><td>subcommittee</td><td>direct</td></tr>
+<tr><td>establish</td><td>impact</td><td>different</td></tr>
+<tr><td>history</td><td>north</td><td>account</td></tr>
+<tr><td>available</td><td>managers</td><td>failed</td></tr>
+<tr><td>school</td><td>sure</td><td>debate</td></tr>
+<tr><td>according</td><td>hard</td><td>instead</td></tr>
+<tr><td>risk</td><td>sent</td><td>rates</td></tr>
+<tr><td>measures</td><td>defense</td><td>reason</td></tr>
+<tr><td>children</td><td>fiscal</td><td>congressional</td></tr>
+<tr><td>expand</td><td>honorable</td><td>budgeting</td></tr>
+<tr><td>trained</td><td>ability</td><td>question</td></tr>
+</table>
 
 #Current Caveats
 * A naive partition based on an even partition of the probability space may be unsuitable.  I didn't know of a better, politically agnostic way to do this.

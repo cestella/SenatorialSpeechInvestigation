@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.LinkedHashSet;
 import java.util.Set;
 
 import org.apache.commons.cli.CommandLine;
@@ -95,14 +96,14 @@ public class AnalysisJob
 				OutputCollector<MapKey, Text> collector, Reporter reporter)
 				throws IOException 
 		{
-			Set<Text> duplicateSet = new HashSet<Text>();
+			Set<String> duplicateSet = new LinkedHashSet<String>();
 			while(values.hasNext())
 			{
-				duplicateSet.add(values.next());
+				duplicateSet.add(values.next().toString());
 			}
-			for(Text rawTokens : duplicateSet)
+			for(String rawTokens : duplicateSet)
 			{
-				collector.collect(key, rawTokens);
+				collector.collect(key, new Text(rawTokens) );
 			}
 		}
 		
@@ -126,13 +127,14 @@ public class AnalysisJob
 		{
 			
 			String currentTerm;
-			Set<Text> rawValues;
+			Set<String> rawValues;
 			int numDocsForTerm;
 			
 			public State(String currentTerm)
 			{
 				this.currentTerm = currentTerm;
-				rawValues = new HashSet<Text>();
+				rawValues = new LinkedHashSet<String>();
+				
 				numDocsForTerm = 1;
 			}
 			
@@ -154,6 +156,13 @@ public class AnalysisJob
 			return totalNumDocs;
 		}
 		
+		//Compute the IDF
+		private double computeMetric(int N, int d)
+		{
+			
+			return Math.log10( (N - d + 0.5) / (N + 0.5));
+		}
+		
 		@Override
 		public void reduce( MapKey key
 						  , Iterator<Text> values
@@ -167,16 +176,16 @@ public class AnalysisJob
 				currentState.numDocsForTerm++;
 				while(values.hasNext())
 				{
-					currentState.rawValues.add(values.next());
+					currentState.rawValues.add(values.next().toString());
 				}
 			}
 			else
 			{
 				if(currentState != null && currentState.currentTerm != null)
 				{
-					double probability = 1.0*currentState.numDocsForTerm/getTotalNumDocs();
+					double metric = computeMetric(getTotalNumDocs(), currentState.numDocsForTerm);//1.0*currentState.numDocsForTerm/getTotalNumDocs();
 					//format: probability \t stemmed term \t all matching words with image as stemmed term
-					collector.collect(new DoubleWritable(probability)
+					collector.collect(new DoubleWritable(metric)
 									 , new Text(Joiner.on('\t')
 											 		  .join( currentState.currentTerm
 											 			   , Joiner.on(' ')

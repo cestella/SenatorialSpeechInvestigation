@@ -23,6 +23,7 @@ import org.apache.hadoop.mapred.OutputCollector;
 
 import com.caseystella.AnalysisJob;
 import com.caseystella.mr.MapKey;
+import com.caseystella.util.NLPUtil;
 import com.google.common.base.Splitter;
 import com.google.common.base.Supplier;
 import com.google.common.collect.ImmutableSet;
@@ -202,9 +203,9 @@ public class AnalysisTest extends TestCase {
     						  );
 	    	}
     		
-    		assertEquals(2.0/3, reducerOutput.get("cat")[0]);
-    		assertEquals(Lists.newArrayList("cat", "cats"), (List<String>)reducerOutput.get("cat")[1]);
-    		assertEquals(1.0/3, reducerOutput.get("brain")[0]);
+    		assertEquals(NLPUtil.INSTANCE.IDF(3, 2), reducerOutput.get("cat")[0]);
+    		assertEquals(Lists.newArrayList("cats", "cat"), (List<String>)reducerOutput.get("cat")[1]);
+    		assertEquals(NLPUtil.INSTANCE.IDF(3, 1), reducerOutput.get("brain")[0]);
     	}
     	
     }

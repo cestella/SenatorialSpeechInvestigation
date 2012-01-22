@@ -32,6 +32,12 @@ public enum NLPUtil
 	}
 	private static final Pattern whitespacePattern = Pattern.compile("[ \t\r\n\\-]");
 	
+	public static double IDF(int N, int d)
+	{
+		
+		return Math.log10( (N - d + 0.5) / (N + 0.5));
+	}
+	
 	public Iterable<ImmutableToken> tokenizeDocument( String document
 													, Set<String> stopwords
 													)
@@ -67,7 +73,7 @@ public enum NLPUtil
             if(token != null && token.length() > 0)
             {
             	String tokenNormalized = token.toLowerCase().replaceAll("[^A-Za-z ]", "");
-            	if(tokenNormalized.length() > 0 && !stopwords.contains(tokenNormalized))
+            	if(tokenNormalized.length() > 2 && !stopwords.contains(tokenNormalized))
             	{
             		tokens.add(new ImmutableToken(tokenNormalized, stemmer.stem(tokenNormalized)));
             	}

@@ -75,6 +75,7 @@ public class AnalysisIntegrationTest extends TestCase
 	    	{
 	    		Thread.sleep(5000);
 	    	}
+	    	assertTrue(job.isSuccessful());
     	}
     }
 }

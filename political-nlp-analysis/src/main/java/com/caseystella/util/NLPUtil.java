@@ -67,7 +67,7 @@ public enum NLPUtil
             if(token != null && token.length() > 0)
             {
             	String tokenNormalized = token.toLowerCase().replaceAll("[^A-Za-z ]", "");
-            	if(!stopwords.contains(tokenNormalized))
+            	if(tokenNormalized.length() > 0 && !stopwords.contains(tokenNormalized))
             	{
             		tokens.add(new ImmutableToken(tokenNormalized, stemmer.stem(tokenNormalized)));
             	}

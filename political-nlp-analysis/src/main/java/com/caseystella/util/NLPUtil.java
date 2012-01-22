@@ -7,7 +7,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 
-public enum NLPUtil 
+public enum NLPUtil implements INLPUtil 
 {
 	INSTANCE
 	;
@@ -32,12 +32,20 @@ public enum NLPUtil
 	}
 	private static final Pattern whitespacePattern = Pattern.compile("[ \t\r\n\\-]");
 	
+	/* (non-Javadoc)
+	 * @see com.caseystella.util.INLPUtil#IDF(int, int)
+	 */
+	@Override
 	public double IDF(int N, int d)
 	{
 		
 		return Math.log10( (N - d + 0.5) / (N + 0.5));
 	}
 	
+	/* (non-Javadoc)
+	 * @see com.caseystella.util.INLPUtil#tokenizeDocument(java.lang.String, java.util.Set)
+	 */
+	@Override
 	public Iterable<ImmutableToken> tokenizeDocument( String document
 													, Set<String> stopwords
 													)

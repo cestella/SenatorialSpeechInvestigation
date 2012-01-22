@@ -1,3 +1,9 @@
 .metadata
 political-nlp-analysis/target
 political-nlp-analysis/data/processed
+political-nlp-analysis/src/main/latex/*.aux
+political-nlp-analysis/src/main/latex/*.log
+political-nlp-analysis/src/main/latex/*.nav
+political-nlp-analysis/src/main/latex/*.out
+political-nlp-analysis/src/main/latex/*.snm
+political-nlp-analysis/src/main/latex/*.toc

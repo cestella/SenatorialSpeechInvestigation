@@ -1,0 +1,150 @@
+\documentclass{beamer}
+\usepackage{beamerthemesplit}
+\usepackage{hyperref}
+
+\begin{document}
+\title{Using Hadoop: Best Practices}
+\author{Casey Stella}
+\date{\today} 
+
+\frame{\titlepage} 
+
+\frame{\frametitle{Table of Contents}\tableofcontents} 
+
+\section{Introduction}
+
+\frame{\frametitle{Introduction}
+\begin{itemize}
+\item Hi, I'm Casey\pause
+  \begin{itemize}
+  \item I work at Explorys\pause
+  \item I work with Hadoop and the Hadoop ecosystem daily\pause
+  \item I am a recovering Mathematician\pause
+  \end{itemize}
+\item Caveat emptor
+  \begin{itemize}
+  \item Not all problems can be solved with Map Reduce
+  \item This is a batch processing system (i.e. not realtime)\pause
+  \end{itemize}
+
+\item I'm going to talk about some of the best practices that I've seen\pause
+  \begin{itemize}
+  \item Some of these are common knowledge\pause
+  \item Some of these don't show up until you've been up 'til 3AM debugging a problem.\pause
+  \end{itemize}
+\item These are my opinions and not necessarily the opinions of my employer.
+\end{itemize}
+}
+
+\section{Designing a Map Reduce Algorithm}
+
+\subsection{Performance}
+\frame{\frametitle{Performance considerations}
+\begin{itemize}
+\item Setup and teardown costs, so keep the HDFS block size large\pause
+\item Mappers, Reducers and Combiners have memory constraints\pause
+\item Transmission costs dearly 
+  \begin{itemize}
+  \item Use Snappy, LZO, or (soon) LZ4 compression at every phase\pause
+  \item Serialize your objects tightly (e.g. not using Java Serialization)\pause
+  \item Key/values emitted from the map phase had better be linear with a {\bf small} constant..preferably below $1$\pause
+  \end{itemize}
+\item Strategies
+  \begin{itemize}
+  \item Intelligent use of the combiners\pause
+  \item Use Local Aggregation in the mapper to emit a more complex value.\pause
+  \item Ensure that all components of your keys are necessary in the sorting logic.  If any are not, push them into the value.
+  \end{itemize}
+\end{itemize}
+}
+
+\subsection{Testing}
+\frame{\frametitle{Unit/Integration Testing Methodologies}
+\begin{itemize}
+\item First off, do it.\pause
+\item Unit test individual mappers, reducers, combiners and partitioners
+  \begin{itemize}
+  \item Actual unit tests.  This will help debugging, I promise.
+  \item Design components so that dependencies can be injected via polymorphism when testing\pause
+  \end{itemize}
+\item Minimally verify that keys
+  \begin{itemize}
+  \item Can be serialized and deserialized
+  \item $hashcode()$ is sensible (Remember: the $hashcode()$ for enum is not stable)
+  \item $compareTo()$ is reflexive, symmetric and jives with $equals()$\pause
+  \end{itemize}
+\item Integration test via single user mode hadoop if you like, but I think it's mostly pretty useless.
+\end{itemize}
+}
+
+\frame{\frametitle{Quality Assurance Testing}
+\begin{itemize}
+\item The output of processing large amounts of data is often large\pause
+\item Verify statistical properties via MR
+  \begin{itemize}
+  \item If statistical tests fit within Map Reduce, then use MR\pause
+  \item If not, then sample the dataset and verify with R, Python or whatever.\pause
+  \end{itemize}
+\item Do outlier analysis and thresholding based QA\pause
+\item Data analysis is hard and often requires specialized skills
+  \begin{itemize}
+  \item Enter a new breed: the data scientist\pause
+  \item Stats + Computer Science + Domain knowledge\pause
+  \item Often not a software engineer
+  \end{itemize}
+\end{itemize}
+}
+
+\subsection{Debugging}
+\frame{\frametitle{Debugging Methodologies}
+\begin{itemize}
+\item Better to catch it at the unit test level\pause
+\item If you can't, I suggest the following technique
+  \begin{itemize}
+  \item Investigatory map reduce job to find the data causing the issue. \pause
+  \item Single point if you're lucky, if not then a random sample using reservoir sampling\pause
+  \item Take the data and integrate it into a unit test.\pause
+  \end{itemize}
+\item {\bf DO NOT}
+  \begin{itemize}
+  \item Use print statements to debug unless you're sure of the scope.\pause
+  \item Use counters where the group or name count grows more than a fixed amount.\pause
+  \end{itemize}
+\item {\bf DO}
+  \begin{itemize}
+  \item Use a single counter in the actual job if the job doesn't finish\pause
+  \item Use a map reduce job that outputs suspect input data into HDFS
+  \end{itemize}
+\end{itemize}
+}
+
+\section{Conclusion}
+
+\frame{\frametitle{Sample Code}
+\begin{itemize}
+\item I've created a simple Hadoop project in the NLP domain to illustrate some of these points
+\item Implements a Map Reduce algorithm that analyzes the senatorial speeches and generates the most statistically important words used, comparing across multiple political orientations
+\item It features
+  \begin{itemize}
+  \item Full example of a Map Reduce algorithm that is not word count
+  \item Unit tests for the Keys and Values
+  \item Integration test that executes the full lifecycle
+  \end{itemize}
+\item Find it at \url{https://github.com/cestella/CHUG-talk}
+\end{itemize}
+}
+
+
+\frame{\frametitle{Conclusion}
+\begin{itemize}
+\item Thanks for your attention
+\item Follow me on twitter $@casey\_stella$
+\item Find me at
+  \begin{itemize}
+  \item \url{http://caseystella.com}
+  \item \url{https://github.com/cestella}
+  \end{itemize}
+\end{itemize}
+}
+
+\end{document}

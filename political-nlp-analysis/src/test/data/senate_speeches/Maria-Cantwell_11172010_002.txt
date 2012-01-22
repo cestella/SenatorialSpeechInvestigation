@@ -1,0 +1,63 @@
+Today, Senator Maria Cantwell (D-WA) and 17 U.S. Senate colleagues urged Treasury Secretary Timothy Geithner to alter the federal foreclosure prevention program to help responsible, but struggling homeowners can modify their mortgages. The Senators expressed concern in a letter sent to Geithner today over the slow pace of mortgage modifications and the reluctance of some banks to cooperate in the Home Affordable Modification Program (HAMP). Cantwell and the other senators suggested specific changes to the program, including:
+ 
+·         Disincentives to mortgage servicers that make mistakes or refuse to participate in the mortgage modification process
+·         Automatic permanent loan modifications for homeowners that successfully complete trial modifications
+·         Establishment of an Office of Homeowner Advocate to specifically assist homeowners going through the modification process
+·         Allowing unemployment insurance to be included with income in determining eligibility for the program
+ 
+“The recent revelations of ‘robo-signing’ or ‘rubber-stamping’ of foreclosures by banks that exercised lax oversight is certainly shocking, but that is only one example of how banks have mishandled both foreclosures and mortgage modification requests,” wrote the senators. “If many banks and servicers are not handling even basic foreclosure procedures correctly, it is likely that many are also not correctly evaluating homeowners for mortgage modifications. We ask that the Treasury Department hold banks and servicers accountable with a significantly more thorough review process than Treasury has implemented thus far.
+ 
+“Countless constituents tell us stories of being stonewalled by banks for very long periods of time; of not being told the reasons for the rejection of their modification request; of significant delays caused by banks losing paperwork; or of trial modifications cancelled with no rationale. We cannot let this continue.
+ 
+“We appreciate what progress HAMP has already made, but amid continual frustrations from our constituents, it is clear that significant improvements are urgently needed.”
+ 
+The letter was organized by Senator Robert Menendez (D-NJ), who chairs the Senate Banking Subcommittee on Housing, Transportation and Community Development. Others signing the letter were Senators Al Franken (D-MN), Patrick Leahy (D-VT), Sherrod Brown (D-OH), Kirsten Gillibrand (D-NY), Debbie Stabenow (D-MI), Bernard Sanders (I-VT), Frank Lautenberg (D-NJ), Daniel Akaka (D-HI), Carl Levin (D-MI), Tom Udall (D-NM), Sheldon Whitehouse (D-RI), Benjamin Cardin (D-MD), Mark Begich (D-AK), Maria Cantwell (D-WA), Jeanne Shaheen (D-NH), Charles Schumer (D-NY), Jeff Merkley (D-OR).
+ 
+PDF of letter to Geithner: http://cantwell.senate.gov/news/111710_HAMP_letter.pdf
+ 
+Note: The letter is dated Tuesday but was sent to Treasury today. Text of letter:
+ 
+       November 16, 2010
+ 
+The Honorable Timothy Geithner
+Secretary of the Treasury
+1500 Pennsylvania Ave NW
+Washington, DC 20220
+ 
+Dear Secretary Geithner:
+ 
+We write to you today to request changes that would improve the federal government’s foreclosure prevention programs.  The recent revelations of “robo-signing” or “rubber-stamping” of foreclosures by banks that exercised lax oversight is certainly shocking, but that is only one example of how banks have mishandled both foreclosures and mortgage modification requests.  While we have passed important legislation to deal with the foreclosure crisis, we believe that ending the foreclosure crisis will require that the federal government both vigorously enforce existing law and implement additional efforts that are clearly needed.
+ 
+The “robo-signing” is directly attributable to banks and servicers not doing proper due diligence, which is inexcusable when dealing with a matter as monumental as the seizure of a family’s home.  But the more important point is that if many banks and servicers are not handling even basic foreclosure procedures correctly, it is likely that many are also not correctly evaluating homeowners for mortgage modifications.  We ask that the Treasury Department hold banks and servicers accountable with a significantly more thorough review process than Treasury has implemented thus far.  For example, too often the mortgage modification appeals process consists of the government simply repeating the unsupported assertions of banks and mortgage servicers about homeowners not being eligible for a modification.
+ 
+While some progress has been made, it is clear that the Home Affordable Modification Program is neither working as well as intended nor reaching the desired number of homeowners.  Treasury’s initial goals were that “7 to 9 million families [could] restructure or refinance their homes” through HAMP,[1] but the program is falling far short of that goal in the following respects:
+ 
+Since January 2010, only 495,898 permanent modifications have been granted compared to 729,114 trial or permanent modifications that have been canceled[2]
+53.2% of all trial modifications have been canceled, as compared to only 34.1% of all trial modifications that have been successfully converted to permanent modifications.[3]
+Approximately $50 billion was allocated for HAMP, but the October 2010 report from the Special Inspector General for TARP claims that as of September 30, 2010, only $483.3 million has been spent.[4] 
+ 
+And while the statistics cited above concern us greatly, it is even more sobering to continually hear from constituents who owe more than their house is worth and can’t get a mortgage modification or refinance from their bank.  This is typically because of losing their jobs through no fault of their own, combined with the decreasing value of their home.
+ 
+Countless constituents tell us stories of being stonewalled by banks for very long periods of time; of not being told the reasons for the rejection of their modification request; of significant delays caused by banks losing paperwork; or of trial modifications cancelled with no rationale.  We cannot let this continue.
+ 
+Below, we have listed several common sense and widely agreed upon steps that the Treasury Department can take today to improve HAMP’s effectiveness that do not require Congressional approval.  These are not extraordinary steps, and we strongly urge you to implement them as soon as possible.
+ 
+Hold Servicers Accountable: Banks and servicers must be held accountable.  Treasury currently offers incentives for their participation, but if there is no disincentive for their mistakes, they simply will not correct those mistakes in the future.  If homeowners are eligible for modifications, they should get them.  Additionally, in its October 2010 report to Congress, SIGTARP several times noted that “there have been no financial penalties imposed by Treasury on servicers who have violated HAMP guidelines,” and listed several examples of servicers treating homeowners unfairly.[5]
+ 
+Office of the Homeowner Advocate: Senator Franken’s proposal would establish a Treasury office specifically advocating for homeowners with respect to common sense HAMP mortgage modifications.  Treasury supported creating the Consumer Financial Protection Bureau because of the lack of a consumer advocate in the banking sector, and Treasury should support establishing a similar office in HAMP for homeowners because of the lack of a consumer advocate in the foreclosure process.  Many elements of this proposal do not require Congress to enact.
+ 
+Automatic Conversions: If a homeowner successfully completes a trial modification, they should be automatically extended a permanent modification.  This could make a big difference in reducing bureaucratic obstacles that are preventing homeowners from getting permanent modifications.
+ 
+Revise Eligibility Requirements: While we appreciate the expanded eligibility implemented in April 2010, we believe that the eligibility rules must be revised further.  To include more homeowners, unemployment insurance should be included with income when determining HAMP eligibility.  As the economy staggers and more homeowners are unable to secure employment, more homeowners will find themselves in need of assistance.  And Treasury should clarify that primary residents who are not listed on the mortgage note but who can assume the note – often widows and surviving children, as well as people experiencing divorce or domestic violence – should be able to obtain a loan modification.
+ 
+Investor-Based Modification Denial Documentation: While Treasury has recently announced that servicers will only be required to provide certain documentation to the Treasury Department and its agents upon request, we believe that it is essential for homeowners to be provided with this information directly.  The homeowner is in the best position to act quickly on wrongful denials if they receive this information directly. We believe that more transparency is crucial.
+ 
+Net Present Value Analysis: Sec. 1482 of the Dodd-Frank Wall Street Reform and Consumer Protection Act requires Treasury to make publicly available all NPV analyses for homeowners who have been denied HAMP modifications, including specific servicer analyses, and Treasury recently announced that it will be available in February 2011.  While we applaud that action, we strongly urge Treasury to hold firm to this timeline so that the public can receive this information as soon as possible.
+ 
+We appreciate what progress HAMP has already made, but amid continual frustrations from our constituents, it is clear that significant improvements are urgently needed.  Recent reports indicate that members of the Obama Administration share our viewpoint.  According to Secretary Donovan, a recent government investigation found that some large mortgage servicers and banks are not offering borrowers a fair chance to modify loans.  As he said, we should be “focused on the process early, to keep people in their homes, rather than focusing late, when it is much less likely that people will be able to stay in their homes.”[6] 
+ 
+We were also encouraged by your recent meeting with struggling homeowners and homeowner advocates on November 4, 2010, during which you were confronted with HAMP’s many problems.  Afterward, one participant paraphrased you as saying that “there are legislative guidelines that can hinder [Treasury] on doing anything.”[7]  As we have stated, we believe that our proposals above do not require Congressional action, but if you have other statutory suggestions for improving HAMP that Treasury would support, please share those with us.
+ 
+We strongly urge the Treasury Department to immediately implement our specific improvements.  Homeowners cannot afford to wait any longer.
+ 
+We thank you for your attention to this pressing matter and look forward to your reply.

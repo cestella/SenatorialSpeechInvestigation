@@ -1,0 +1,357 @@
+CAPE CANAVERAL, FL — U.S. Sen. Bill Nelson, in a move to further lessen the impact from the wind-down of the space shuttle, this morning announced a plan aimed at boosting the commercial rocket industry and attracting thousands of jobs to Florida’s Space Coast.
+
+In meetings with representatives from NASA and various commercial aerospace ventures at Cape Canaveral on Tuesday, Nelson touted a new measure that would create up to five regional business enterprise zones around the country as magnets for commercial space ventures – which in turn would attract jobs to areas where there are lots of scientists and engineers. 
+ 
+More specifically, his office said, the Commercial Space Jobs and Investment Act would allow space-related businesses - situated around places like the Kennedy Space Center ( KSC ) - to qualify for major tax breaks and other incentives.
+ 
+“President Kennedy was right when he predicted that space exploration would create a great number of new companies and strengthen our economy,” Nelson said.  “What we’re doing now is everything we can to ensure KSC’s continued importance to our nation’s space exploration effort, while also broadening the economic opportunities along our Space Coast.”
+ 
+Nelson said this new measure ( below ) is the next critical step to spurring space-industry job growth in the region.  Earlier this month, the U.S. Senate quickly and unanimously passed a different Nelson-engineered plan, and the U.S. House of Representatives is considering a comparable measure.  The Senate-approved plan provides enough money for another space shuttle flight next year, for jump-starting NASA’s new heavy-lift rocket, and for developing the commercial rocket industry – all of which will save jobs of thousands of displaced shuttle workers.
+The new proposal - to give tax breaks to commercial space entrepreneurs - is drawing the support of aerospace industry leaders including those from Space Florida, the state-backed organization charged with promoting the development of commercial rocketry and related undertakings.
+
+"The Commercial Space Jobs and Investment Act symbolizes a significant step forward in ensuring the right incentives are in place to attract industry to Florida, and the broader domestic marketplace," said Frank DiBello, Space Florida president.  "This bill will stimulate the commercial space industry to create jobs in our state, at a time when we need it most."
+ 
+ 
+ 
+A copy of the bill follows:
+ 
+111TH CONGRESS
+2D SESSION S. ll
+To amend the Internal Revenue Code of 1986 to encourage investment in
+commercial spaceflight facilities and equipment, research, and job training,
+and for other purposes.
+IN THE SENATE OF THE UNITED STATES
+llllllllll
+Mr. NELSON of Florida introduced the following bill; which was read twice and
+referred to the Committee on llllllllll
+A BILL
+To amend the Internal Revenue Code of 1986 to encourage
+investment in commercial spaceflight facilities and equipment,
+research, and job training, and for other purposes.
+1 Be it enacted by the Senate and House of Representa2
+tives of the United States of America in Congress assembled,
+3 SECTION 1. SHORT TITLE.
+4 This Act may be cited as the ‘‘Commercial Space
+5 Jobs and Investment Act of 2010’’.
+6 SEC. 2. COMMERCIAL SPACE CAPITAL FORMATION CREDIT.
+7 (a) IN GENERAL.—Subpart B of part IV of sub8
+chapter A of chapter 1 of the Internal Revenue Code of
+2
+MAT10618 S.L.C.
+1 1986 is amended by inserting after section 30D the fol2
+lowing new section:
+3 ‘‘SEC. 30E. COMMERCIAL SPACE CAPITAL FORMATION
+4 CREDIT.
+5 ‘‘(a) ALLOWANCE OF CREDIT.—There shall be al6
+lowed as a credit against the tax imposed by this chapter
+7 for the taxable year an amount equal to 20 percent of the
+8 qualified equity investment paid by the taxpayer during
+9 the taxable year.
+10 ‘‘(b) QUALIFIED EQUITY INVESTMENT.—For pur11
+poses of this section—
+12 ‘‘(1) IN GENERAL.—The term ‘qualified equity
+13 investment’ means any equity investment in a quali14
+fied commercial space entity if—
+15 ‘‘(A) such investment is acquired by the
+16 taxpayer at its original issue (directly or
+17 through an underwriter) in exchange for cash,
+18 and
+19 ‘‘(B) such investment is designated for
+20 purposes of this section by the qualified com21
+mercial space entity.
+22 ‘‘(2) TREATMENT OF SUBSEQUENT PUR23
+CHASERS.—The term ‘qualified equity investment’
+24 includes any equity investment which would (but for
+25 paragraph (1)(A)) be a qualified equity investment
+3
+MAT10618 S.L.C.
+1 in the hands of the taxpayer if such investment was
+2 a qualified equity investment in the hands of a prior
+3 holder.
+4 ‘‘(3) REDEMPTIONS.—A rule similar to the rule
+5 of section 1202(c)(3) shall apply for purposes of this
+6 subsection.
+7 ‘‘(4) EQUITY INVESTMENT.—The term ‘equity
+8 investment’ means—
+9 ‘‘(A) any stock (other than nonqualified
+10 preferred stock as defined in section 351(g)(2))
+11 in an entity which is a corporation, and
+12 ‘‘(B) any capital interest in an entity
+13 which is a partnership.
+14 ‘‘(c) QUALIFIED COMMERCIAL SPACE ENTITY.—For
+15 purposes of this section—
+16 ‘‘(1) IN GENERAL.—The term ‘qualified com17
+mercial space entity’ means any domestic corpora18
+tion or partnership the principal trade or business of
+19 which is the commercial development of space and
+20 the principal place of business is located in a Com21
+mercial Space Enterprise Zone designated under
+22 subsection (g).
+23 ‘‘(2) COMMERCIAL DEVELOPMENT OF SPACE.—
+24 The term ‘commercial development of space’
+25 means—
+4
+MAT10618 S.L.C.
+1 ‘‘(A) the development of private space
+2 launch vehicles, reentry vehicles, and related
+3 equipment,
+4 ‘‘(B) the development, provision, and oper5
+ation of private space launching, reentry, and
+6 related services, and
+7 ‘‘(C) other specific activities identified by
+8 the Secretary in rules, regulations, or formal
+9 guidance consistent with the purposes of this
+10 section.
+11 ‘‘(d) RECAPTURE OF CREDIT.—If—
+12 ‘‘(1) the taxpayer fails to hold the qualified eq13
+uity investment the 5-year period beginning on the
+14 date such investment was acquired by the taxpayer,
+15 or
+16 ‘‘(2) during such 5-year period, the entity
+17 ceases to be qualified commercial space entity,
+18 then notwithstanding any other provision of this subtitle,
+19 the tax imposed by this chapter on the taxpayer for the
+20 taxable year beginning in the calendar year in which such
+21 cessation occurred shall be increased by the amount of
+22 credit allowed under subsection (a) to the taxpayer with
+23 respect to such investment.
+5
+MAT10618 S.L.C.
+1 ‘‘(e) BASIS ADJUSTMENTS.—For purposes of this
+2 subtitle, if a credit is allowed under this section for the
+3 acquisition of any investment—
+4 ‘‘(1) the increase in the basis of such invest5
+ment which would (but for this subsection) result
+6 from such acquisition shall be reduced by the
+7 amount of the credit so allowed, and
+8 ‘‘(2) the basis of such investment shall be in9
+creased by the amount of any increase in tax by rea10
+son of subsection (d).
+11 ‘‘(f) APPLICATION WITH OTHER CREDITS.—
+12 ‘‘(1) BUSINESS CREDIT TREATED AS PART OF
+13 GENERAL BUSINESS CREDIT.—Except with respect
+14 to a taxpayer described in paragraph (2), the credit
+15 allowed under subsection (a) for any taxable year
+16 shall be treated as a credit listed in section 38(b) for
+17 such taxable year (and not allowed under subsection
+18 (a)).
+19 ‘‘(2) PERSONAL CREDIT.—
+20 ‘‘(A) IN GENERAL.—For purposes of this
+21 title, the credit allowed under subsection (a) for
+22 any taxable year to a taxpayer other than a cor23
+poration shall be treated as a credit allowable
+24 under subpart A for such taxable year.
+6
+MAT10618 S.L.C.
+1 ‘‘(B) LIMITATION BASED ON AMOUNT OF
+2 TAX.—In the case of a taxable year to which
+3 section 26(a)(2) does not apply, the credit al4
+lowed under subsection (a) for any taxable year
+5 by reason of the application of subparagraph
+6 (A) shall not exceed the excess of—
+7 ‘‘(i) the sum of the regular tax liabil8
+ity (as defined in section 26(b)) plus the
+9 tax imposed by section 55, over
+10 ‘‘(ii) the sum of the credits allowable
+11 under subpart A (other than this section
+12 and sections 23, 25D, 30, and 30D) and
+13 section 27 for the taxable year.
+14 ‘‘(g) DESIGNATION OF COMMERCIAL SPACE ENTER15
+PRISE ZONES.—
+16 ‘‘(1) IN GENERAL.—From among the areas
+17 nominated for designation under this subsection, the
+18 Secretary of Commerce shall designate not more
+19 than 5 Commercial Space Enterprise Zones.
+20 ‘‘(2) LIMITATIONS ON DESIGNATION.—No area
+21 may be designated under paragraph (1) unless—
+22 ‘‘(A) the area is nominated by a State,
+23 ‘‘(B) the State provides written assurances
+24 and other documentation satisfactory to the
+25 Secretary of Commerce that—
+7
+MAT10618 S.L.C.
+1 ‘‘(i) the nominated area has a pres2
+ence of high unemployment and economic
+3 dislocation in public sector, space-related
+4 jobs,
+5 ‘‘(ii) the nominated area has a pres6
+ence of well-developed human and capital
+7 infrastructure and the capacity to effec8
+tively use Federal tax incentives to pro9
+mote progress in commercial space capa10
+bility, including crew and cargo transpor11
+tation systems, research and technology
+12 development, and other potential activities
+13 in low-Earth orbit, and
+14 ‘‘(iii) State and local officials, busi15
+ness community, and local population have
+16 developed a unified, feasible, and effective
+17 strategy for contributing to, and increas18
+ing, United States competitiveness in the
+19 commercial space sector, and
+20 ‘‘(C) the Secretary of Commerce deter21
+mines that any information furnished is reason22
+ably accurate.
+23 ‘‘(3) APPLICATION AND DESIGNATION TIM24
+ING.—
+8
+MAT10618 S.L.C.
+1 ‘‘(A) ISSUANCE OF APPLICATIONS.—The
+2 Secretary of Commerce shall issue Commercial
+3 Space Enterprise Zone nomination applications
+4 and instructions not later than the date which
+5 is 45 days after the date of the enactment of
+6 the Commercial Space Jobs and Investment Act
+7 of 2010.
+8 ‘‘(B) SUBMISSION OF APPLICATIONS.—A
+9 State shall submit a Commercial Space Enter10
+prise Zone nomination application not later
+11 than the date which is 4 months after such ap12
+plications are issued under subparagraph (A).
+13 ‘‘(C) DESIGNATIONS.—The Secretary of
+14 Commerce shall make Commercial Space Enter15
+prise Zone designations not later than the date
+16 which is 3 months after the application deadline
+17 under subparagraph (B).
+18 ‘‘(h) TERMINATION.—This section shall not apply to
+19 investments acquired after December 31, 2019.’’.
+20 (b) CONFORMING AMENDMENTS.—
+21 (1) Section 38(b) of the Internal Revenue Code
+22 of 1986 is amended by striking ‘‘plus’’ at the end of
+23 paragraph (35), by striking the period at the end of
+24 paragraph (36) and inserting ‘‘, plus’’, and by add25
+ing at the end the following new paragraph:
+9
+MAT10618 S.L.C.
+1 ‘‘(37) the portion of the commercial space cap2
+ital formation credit to which section 30E(f)(1) ap3
+plies.’’.
+4 (2) Section 1016(a) of such Code is amended
+5 by striking ‘‘and’’ at the end of paragraph (36), by
+6 striking the period at the end of paragraph (37) and
+7 inserting ‘‘, and’’, and by adding at the end the fol8
+lowing new paragraph:
+9 ‘‘(38) to the extent provided in section
+10 30E(e)(1).’’.
+11 (3) The table of sections for subpart B of part
+12 IV of subchapter A of chapter 1 of such Code is
+13 amended by inserting after the item relating to sec14
+tion 30D the following new item:
+‘‘Sec. 30E. Commercial space capital formation credit.’’.
+15 (c) EFFECTIVE DATE.—The amendments made by
+16 this section shall apply to investments acquired after the
+17 date of the enactment of this Act.
+18 SEC. 3. COMMERCIAL SPACE RESEARCH CREDIT.
+19 (a) IN GENERAL.—Section 41(b) of the Internal Rev20
+enue Code of 1986 is amended by adding at the end the
+21 following new paragraph:
+22 ‘‘(5) COMMERCIAL SPACE RESEARCH.—
+23 ‘‘(A) ENHANCED CREDIT.—In the case of
+24 any taxable year in which the qualified research
+25 expenses of the taxpayer include qualified com10
+MAT10618 S.L.C.
+1 mercial space research expenses, subsection
+2 (a)(1)—
+3 ‘‘(i) shall be applied by first taking
+4 into account such qualified research ex5
+penses which are not qualified commercial
+6 space research expenses, and
+7 ‘‘(ii) shall be applied by substituting
+8 ‘30 percent’ for ‘20 percent’ in the case of
+9 such qualified commercial space research
+10 expenses.
+11 ‘‘(B) QUALIFIED COMMERCIAL SPACE RE12
+SEARCH EXPENSES.—For purposes of this
+13 paragraph, the term ‘qualified commercial space
+14 research expenses’ means qualified research ex15
+penses attributable to research undertaken in a
+16 Commercial Space Enterprise Zone designated
+17 under section 30E(g) for the purpose of discov18
+ering information—
+19 ‘‘(i) which is technological in nature,
+20 and
+21 ‘‘(ii) the application of which is in22
+tended to be useful in the commercial de23
+velopment of space (as defined in section
+24 30E(c)(2)).
+11
+MAT10618 S.L.C.
+1 ‘‘(C) TERMINATION.—This paragraph shall
+2 not apply to research expenses incurred after
+3 December 31, 2019.’’.
+4 (b) EFFECTIVE DATE.—The amendment made by
+5 this section shall apply to research expenses incurred after
+6 the date of the enactment of this Act.
+7 SEC. 4. SPECIAL DEPRECIATION ALLOWANCE FOR COM8
+MERCIAL SPACE PROPERTY.
+9 (a) IN GENERAL.—Section 168 of the Internal Rev10
+enue Code of 1986 is amended by adding at the end the
+11 following new subsection:
+12 ‘‘(o) SPECIAL ALLOWANCE FOR COMMERCIAL SPACE
+13 PROPERTY.—
+14 ‘‘(1) ADDITIONAL ALLOWANCE.—
+15 ‘‘(A) IN GENERAL.—In the case of any
+16 qualified commercial space property to which
+17 this subparagraph applies—
+18 ‘‘(i) the depreciation deduction pro19
+vided by section 167(a) for the taxable
+20 year in which such property is placed in
+21 service shall include an allowance equal to
+22 50 percent of the adjusted basis of the
+23 qualified commercial space property, and
+24 ‘‘(ii) the adjusted basis of the quali25
+fied commercial space property shall be re12
+MAT10618 S.L.C.
+1 duced by the amount of such deduction be2
+fore computing the amount otherwise al3
+lowable as a depreciation deduction under
+4 this chapter for such taxable year and any
+5 subsequent taxable year.
+6 ‘‘(B) APPLICATION.—Subparagraph (A)
+7 applies to qualified commercial space property
+8 placed in service on or after the date of the en9
+actment of the Commercial Space Jobs and In10
+vestment Act of 2010 and before January 1,
+11 2020, which is—
+12 ‘‘(i) acquired by the taxpayer on or
+13 after such date of enactment and before
+14 January 1, 2020, but only if no written
+15 binding contract for the acquisition was in
+16 effect before such date of enactment, or
+17 ‘‘(ii) acquired by the taxpayer pursu18
+ant to a written binding contract which
+19 was entered into on or after such date of
+20 enactment and before January 1, 2020.
+21 ‘‘(2) QUALIFIED COMMERCIAL SPACE PROP22
+ERTY.—For purposes of this subsection—
+23 ‘‘(A) IN GENERAL.—The term ‘qualified
+24 commercial space property’ means any private
+25 space launch vehicle, reentry vehicle, launch
+13
+MAT10618 S.L.C.
+1 support facilities, space recovery support facili2
+ties, and other space transportation infrastruc3
+ture—
+4 ‘‘(i) to which this section applies,
+5 ‘‘(ii) the original use of which com6
+mences with the taxpayer on or after such
+7 date of enactment, and
+8 ‘‘(iii) substantially all of the use of
+9 which occurs in a Commercial Space En10
+terprise Zone designated under section
+11 30E(g) and in the active conduct of a
+12 trade or business by the taxpayer in such
+13 Zone.
+14 ‘‘(B) EXCEPTIONS.—
+15 ‘‘(i) BONUS DEPRECIATION PROPERTY
+16 UNDER SUBSECTION (k).—The term ‘quali17
+fied commercial space property’ shall not
+18 include any property to which subsection
+19 (k)(1) applies.
+20 ‘‘(ii) ALTERNATIVE DEPRECIATION
+21 PROPERTY.—The term ‘qualified commer22
+cial space property’ shall not include any
+23 property to which the alternative deprecia24
+tion system under subsection (g) applies,
+25 determined without regard to paragraph
+14

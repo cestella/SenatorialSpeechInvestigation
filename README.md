@@ -38,6 +38,7 @@ The results, for the curious, are here:
 
 #Current Caveats
 * A naive partition based on an even partition of the probability space may be unsuitable.  I didn't know of a better, politically agnostic way to do this.
+* An analysis based on n-grams would be more appropriate or at least a more intelligent chunking algorithm so that words like "north korea" are not split.
 * This is not as efficient as it could be.  I could have used term IDs instead of the actual terms, but I wanted the Map Reduce job to be as clear as possible
 
 This code is mostly an intellectual lark and a demonstration of NLP done using Map Reduce that does not require the baggage of Mahout.

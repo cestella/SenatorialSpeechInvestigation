@@ -12,6 +12,11 @@ public class MapKey implements WritableComparable<MapKey>
 {
 	private String term;
 	private int documentId;
+	public MapKey()
+	{
+		this(null, -1);
+	}
+	
 	public MapKey(String term, int documentId)
 	{
 		this.term = term;
@@ -45,5 +50,35 @@ public class MapKey implements WritableComparable<MapKey>
 					.compare(documentId, other.documentId)
 					.result();
 	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + documentId;
+		result = prime * result + ((term == null) ? 0 : term.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		MapKey other = (MapKey) obj;
+		if (documentId != other.documentId)
+			return false;
+		if (term == null) {
+			if (other.term != null)
+				return false;
+		} else if (!term.equals(other.term))
+			return false;
+		return true;
+	}
+	
+	
 
 }

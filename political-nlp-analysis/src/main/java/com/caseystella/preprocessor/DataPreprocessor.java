@@ -228,6 +228,20 @@ public class DataPreprocessor
 		}
 	}
 	
+	public static void execute( File inputDir
+							  , File outputDir
+							  , File idealPointsFile
+							  , double conservativeLeftBoundary
+							  , double liberalRightBoundary
+							  ) throws IOException
+	{
+		 BiMap<String, Double> idealPointsMap = getIdealPointsMap(idealPointsFile);
+		    EnumMap<PoliticalOrientation, List<DocumentDescriptor>> partitions
+		    	= partitionDataDirectory(inputDir, idealPointsMap, liberalRightBoundary, conservativeLeftBoundary );
+		    
+		    dumpData(partitions, outputDir);
+	}
+	
 	public static void main(String... argv) throws ParseException, IOException
 	{
 		CommandLineParser parser = new PosixParser();
@@ -293,11 +307,7 @@ public class DataPreprocessor
 
 	    double liberalRightBoundary = Double.parseDouble(line.getOptionValue("l"));
 	   
-	    BiMap<String, Double> idealPointsMap = getIdealPointsMap(idealPointsFile);
-	    EnumMap<PoliticalOrientation, List<DocumentDescriptor>> partitions
-	    	= partitionDataDirectory(inputDir, idealPointsMap, liberalRightBoundary, conservativeLeftBoundary );
-	    
-	    dumpData(partitions, outputDir);
-	    
+	   
+	    execute(inputDir, outputDir, idealPointsFile, conservativeLeftBoundary, liberalRightBoundary);
 	}
 }

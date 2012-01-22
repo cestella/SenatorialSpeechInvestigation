@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
-import java.util.List;
 import java.util.Set;
 
 import org.apache.commons.cli.CommandLine;
@@ -43,7 +42,11 @@ public class AnalysisJob
 	public static class Mapper extends MapReduceBase 
 							  implements org.apache.hadoop.mapred.Mapper<LongWritable, Text, MapKey, Text>
 	{
-		private Set<String> stopwords;
+		protected Set<String> stopwords;
+		
+		protected Set<String> getStopwords() {
+			return stopwords;
+		}
 		
 		@Override
 		public void configure(JobConf job) 
@@ -51,6 +54,7 @@ public class AnalysisJob
 			stopwords = new HashSet<String>(job.getStringCollection(PARAM_STOPWORDS));
 			
 		}
+		
 		
 		@Override
 		public void map( LongWritable arg0
@@ -64,14 +68,14 @@ public class AnalysisJob
 			int documentOffset = 0;
 			int documentId = -1;
 			String documentStr = null;
-			for(;document.charAt(documentOffset) != ' ';++documentOffset)
+			for(;document.charAt(documentOffset) != '\t';++documentOffset)
 			{
-				documentIdStr.append(document.charAt(documentOffset));
+				documentIdStr.append((char)document.charAt(documentOffset));
 			}
 			
 			documentId = Integer.parseInt(documentIdStr.toString());
 			documentStr = document.toString().substring(documentOffset).trim();
-			for(ImmutableToken token : NLPUtil.INSTANCE.tokenizeDocument(documentStr, stopwords))
+			for(ImmutableToken token : NLPUtil.INSTANCE.tokenizeDocument(documentStr, getStopwords()))
 			{
 				MapKey key = new MapKey(token.getStemmedToken(), documentId);
 				collector.collect(key, new Text(token.getToken()));
@@ -139,11 +143,15 @@ public class AnalysisJob
 		State currentState = null;
 		
 		
-		int totalNumDocs = 0;
+		protected int totalNumDocs = 0;
 		
 		@Override
 		public void configure(JobConf job) {
 			totalNumDocs = job.getInt(PARAM_TOTAL_NUM_DOCS, -1);
+		}
+		
+		protected int getTotalNumDocs() {
+			return totalNumDocs;
 		}
 		
 		@Override
@@ -164,9 +172,9 @@ public class AnalysisJob
 			}
 			else
 			{
-				if(currentState.currentTerm != null)
+				if(currentState != null && currentState.currentTerm != null)
 				{
-					double probability = 1.0*currentState.numDocsForTerm/totalNumDocs;
+					double probability = 1.0*currentState.numDocsForTerm/getTotalNumDocs();
 					//format: probability \t stemmed term \t all matching words with image as stemmed term
 					collector.collect(new DoubleWritable(probability)
 									 , new Text(Joiner.on('\t')

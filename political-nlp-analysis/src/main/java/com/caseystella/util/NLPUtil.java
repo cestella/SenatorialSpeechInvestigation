@@ -30,7 +30,7 @@ public enum NLPUtil
 			return token;
 		}
 	}
-	private static final Pattern whitespacePattern = Pattern.compile("[ \t\r\n]");
+	private static final Pattern whitespacePattern = Pattern.compile("[ \t\r\n\\-]");
 	
 	public Iterable<ImmutableToken> tokenizeDocument( String document
 													, Set<String> stopwords

@@ -26,7 +26,7 @@ import com.google.common.io.LineProcessor;
 
 public class DataPreprocessor 
 {
-	private static enum PoliticalOrientation
+	public static enum PoliticalOrientation
 	{
 		CONSERVATIVE
 	   ,MODERATE
@@ -163,11 +163,11 @@ public class DataPreprocessor
 			
 			double idealPoint = idealPointMap.get(lastName);
 			
-			if(idealPoint < liberalRightBoundary)
+			if(idealPoint < conservativeLeftBoundary)
 			{
 				partitions.get(PoliticalOrientation.LIBERAL).add(descriptor);
 			}
-			else if(idealPoint < conservativeLeftBoundary)
+			else if(idealPoint < liberalRightBoundary)
 			{
 				partitions.get(PoliticalOrientation.MODERATE).add(descriptor);
 			}
@@ -235,6 +235,10 @@ public class DataPreprocessor
 							  , double liberalRightBoundary
 							  ) throws IOException
 	{
+		if(!outputDir.exists())
+		{
+			outputDir.mkdir();
+		}
 		 BiMap<String, Double> idealPointsMap = getIdealPointsMap(idealPointsFile);
 		    EnumMap<PoliticalOrientation, List<DocumentDescriptor>> partitions
 		    	= partitionDataDirectory(inputDir, idealPointsMap, liberalRightBoundary, conservativeLeftBoundary );

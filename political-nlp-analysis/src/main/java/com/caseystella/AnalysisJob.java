@@ -198,6 +198,53 @@ public class AnalysisJob
 		formatter.printHelp( "analysis_job", options );
 	}
 	
+	public static JobConf createJobConf( String inFile
+									   , int totalDocuments
+									   , String outFile
+									   , File stopFile
+									   ) throws IOException
+	{
+		JobConf conf = new JobConf(AnalysisJob.class);
+		conf.setJobName("analysis - " + inFile + " -> " + outFile);
+		conf.setInt(PARAM_TOTAL_NUM_DOCS, totalDocuments);
+		
+		
+		// the keys are words (strings)
+	    conf.setOutputKeyClass(MapKey.class);
+	    // the values are counts (ints)
+	    conf.setOutputValueClass(Text.class);
+	    
+	    conf.setMapperClass(Mapper.class);
+	    conf.setPartitionerClass(Partitioner.class);
+	    conf.setCombinerClass(Combiner.class);
+	    conf.setReducerClass(Reducer.class);
+	    
+	    ArrayList<String> stopwords = Files.readLines( stopFile
+	    										, Charsets.US_ASCII
+	    										, new LineProcessor<ArrayList<String>>() 
+	    										  {
+	    											ArrayList<String> lines = new ArrayList<String>();
+	    											@Override
+	    											public ArrayList<String> getResult() {
+	    												return lines;
+	    											}
+	    											@Override
+	    											public boolean processLine(String line) throws IOException 
+	    											{
+	    												lines.add(line.toLowerCase());
+	    												return true;
+	    											}
+												  }
+	    										);
+	    
+	    conf.setStrings( PARAM_STOPWORDS
+	    			   , stopwords.toArray(new String[stopwords.size()])
+	    			   );
+	    FileInputFormat.addInputPath(conf, new Path(inFile));
+	    FileOutputFormat.setOutputPath(conf, new Path(outFile));
+	    return conf;
+	}
+	
 	public static void main(String... argv) throws IOException, ParseException
 	{
 		
@@ -261,45 +308,8 @@ public class AnalysisJob
 		String outFile = line.getOptionValue('o');
 		String stopFile = line.getOptionValue('s');
 		
-		JobConf conf = new JobConf(AnalysisJob.class);
-		conf.setJobName("analysis - " + inFile + " -> " + outFile);
-		conf.setInt(PARAM_TOTAL_NUM_DOCS, totalDocuments);
+		JobConf conf = createJobConf(inFile, totalDocuments, outFile, new File(stopFile));
 		
-		
-		// the keys are words (strings)
-	    conf.setOutputKeyClass(DoubleWritable.class);
-	    // the values are counts (ints)
-	    conf.setOutputValueClass(Text.class);
-	    
-	    conf.setMapperClass(Mapper.class);
-	    conf.setPartitionerClass(Partitioner.class);
-	    conf.setCombinerClass(Combiner.class);
-	    conf.setReducerClass(Reducer.class);
-	    
-	    ArrayList<String> stopwords = Files.readLines( new File(stopFile)
-	    										, Charsets.US_ASCII
-	    										, new LineProcessor<ArrayList<String>>() 
-	    										  {
-	    											ArrayList<String> lines = null;
-	    											@Override
-	    											public ArrayList<String> getResult() {
-	    												return lines;
-	    											}
-	    											@Override
-	    											public boolean processLine(String line) throws IOException 
-	    											{
-	    												lines.add(line.toLowerCase());
-	    												return true;
-	    											}
-												  }
-	    										);
-	    
-	    conf.setStrings( PARAM_STOPWORDS
-	    			   , stopwords.toArray(new String[stopwords.size()])
-	    			   );
-	    FileInputFormat.addInputPath(conf, new Path(inFile));
-	    FileOutputFormat.setOutputPath(conf, new Path(outFile));
-
 	    JobClient.runJob(conf);
 	}
 }

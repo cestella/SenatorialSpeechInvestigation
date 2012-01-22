@@ -1,0 +1,146 @@
+It’s great to be here with the Future of Music Coalition. 
+
+And it’s great to be here with Mike Mills of REM.   I love how the Future of Music Coalition gives exposure to new artists like Mike.  I've had my eye on these guys, REM, and they're going to take off - you just watch.  They're out of that whole new Athens, Georgia scene.  Look out for a group of kids called the B-52’s.   You should have them next year.  At the Future of Music Coalition.
+
+Now, as you know, I got to the Senate a bit late.
+
+But I didn’t get here too late.
+
+Because we’re debating issues of major consequence right now – health care, the economy, the course of the war in Afghanistan
+
+And one of the issues you don’t hear about as much – but one that will tremendously impact our lives, our economy, and, yes, the future of music – is net neutrality.
+
+Several years ago, in the middle-to-late 90’s, I went and gave a speech to the folks at DARPA, the Defense Advanced Research Projects Agency.   I remember asking what cool things they were working on.  And one guy took me aside and told me he was working on an unmanned aerial vehicle the size of an insect.  I was really excited about that. 
+
+I’m pretty sure it didn’t happen.
+
+But they did succeed in creating the ARPA-net….Forty years ago.  And the ARPA-net grew into the Internet… which is almost as cool.  As the bug-sized unmanned aerial vehicle.
+
+Today, the Internet is the town square.  Thomas Jefferson famously said that given a choice between government without newspapers and newspapers without government, he “would not hesitate to prefer the latter.” If he were here today, I think he’d see the Internet in much the same light.  
+
+Now, fortunately we don’t have to make that choice. Because the Internet is a platform for speech, debate, creativity.  And it is neutral.  And government has a role to play in making sure it stays that way.
+
+And let me add that this is the fundamental political philosophy that I bring as a Senator to so many of our national challenges.  It’s not government’s job to make sure that everyone gets to the same finish line… but government does have a role to play in making sure everyone can at least start from the same starting line. 
+
+That’s how the Internet developed.  The FCC treated the web as a common carrier similar to the phone – meaning that anyone had the right to access it however they wanted so long as they weren’t breaking the law.   But as high-speed Internet became available, the cable and telecom industries convinced the FCC to change the rules – to give corporate Internet Service Providers (ISPs) the power to use, quote, “network management” as code for “finding ways to squeeze more cash out of their networks.”  As a result, the freedom and openness that are the Internet’s hallmarks are being seriously challenged.
+
+Right now, a blog loads just as quickly as a corporate webpage.  An email from your mother comes through just as smoothly as a bill notification from your bank.  An independent bookstore can process your order as quickly as Barnes and Noble.  A garage band can stream its songs just as easily as a multi-platinum superband, like REM. 
+
+But recently, business executives from top ISPs have declared their interest in offering, quote, “prioritized” Internet service to companies who can pay for it.  In other words, a company like Microsoft or Amazon could pay for its content to be delivered over a high-speed network – relegating a blogger or a mom-and-pop business to the slow lane.  
+
+That would transform the Internet from a free, open, and competitive playing field into a “pay-for-play” arena in which citizen bloggers, nonprofits, and small businesses are simply outgunned by major media conglomerates. 
+
+That would transform the World Wide Web into a system of separate and unequal networks.
+
+And it raises two major issues, as I see it.
+
+First, it raises the issue of censorship.   Once service providers are in the business of deciding what kind of content moves at what speed, they come very close to deciding what kind of content moves at all.
+
+Second, this is about entrepreneurialism and innovation.  Great innovations only take place on an even playing field, where the little guys can go head-to-head with the big guys.  If we change the rules of the game to benefit the big guys, innovation will suffer.  So the issue here isn’t only what might be blocked from us, but also what might never be developed in the first place.
+
+Let me talk for a minute about each.
+
+First, censorship.
+
+Take a look at Iran.  In Iran, every Internet provider uses filters to control the websites and emails that users can access.  They use a technology called “Deep Packet Inspection” to inspect every email, Facebook post, and Tweet that anyone sends, and – in real-time – block content that’s deemed objectionable.  
+
+You might say, well, that’s a terrible situation, but it’s happening in Iran, and we are not Iran. 
+
+No, we’re not Iran, but that isn’t stopping several companies from taking the same or similar technology for kind of a test drive. 
+
+First, you may remember that in 2007, Verizon refused to allow the pro-choice group NARAL to send text messages to its supporters – even though they had signed up to receive them.  Verizon’s explanation was that it had the right to block “controversial or unsavory” messages.   Like, for example, that a woman should have control of her reproductive system.
+A second example: Comcast has used Deep Packet Inspection to block lawful peer-to-peer applications. 
+And you may remember that during a live webcast of a 2007 Pearl Jam concert, AT&T killed the audio for a few beats.  Turns out the missing lyrics were criticisms of President Bush.  
+The stifling of openness on the Internet isn’t always about censorship.  In the future, it could simply be a product of business at work – of ISPs turning a profit. 
+
+The Chief Technology Officer for BellSouth recently said, “I can buy a coach standby ticket or a first class ticket… I can get two-day air or six-day ground.”  He asserted the Internet should be the same way.  
+
+The CEO of Verizon made the same point when he said, “We need to make sure there is the right economic model… we need to pay for the pipe.”   And one provider proposed a system where consumers could pay a cheap monthly rate for light Internet use, a higher fee for heavier use…  but with an exception for people who accessed only the content created by that provider.
+
+ 
+
+That’s a business motive, but it has the effect of limiting speech, and as far as I’m concerned, free speech limited… or free speech delayed are the same as free speech denied.  
+
+Because the truth is the Internet is the town hall of the 21st Century. 
+
+In the 1997 decision Reno v. ACLU, Justice Stevens wrote:
+
+“Through the use of chat rooms, any person with a phone line can become a town crier with a voice that resonates farther than it could from any soapbox.  Through the use of Web pages, mail exploders, and newsgroups, the same individual can become a pamphleteer.”
+
+I serve on the Judiciary Committee – and on my fourth day in the Senate… my first hearing on that committee, we were dealing with the nomination of Judge (now Justice) Sonia Sotomayor. I asked her specifically about whether she thought that the American public has a compelling First Amendment interest in ensuring the Internet stays open and accessible.  And if I could paraphrase her answer, it was “yes.” 
+
+As noisy and messy as it may be, the Internet is a democracy.  And because of that, it is a critical part of our democracy.  But, in the absence of strong legislation prohibiting ISPs from regulating content, that may not always be the case. 
+
+Let me add that among the people who would be hurt the most are rural users, who, like many in my home state of Minnesota, often only have access to a single ISP. 
+
+If that rural ISP decides to favor or cut special deals with big companies—or the companies that ISP also owns—rural users will be subjected to solely the viewpoints that the ISP favors.
+
+ISP profit margins should never come at the cost of a free and open Internet. 
+
+Because while they may benefit, we all lose. And it’s not just the material that could be slowed or censored.  It’s innovation itself.
+
+In America, we think that an individual with a big idea is just as worthy of competing as a company with a big market share.  But the loss of a neutral Internet would mean that the market is no longer competitive.  It would no longer be a meritocracy.
+
+Consider the case of YouTube.  YouTube was founded in 2005 above a pizzeria in San Mateo, California.  At the time, the most popular video application was something called Google Video—an app that most people came to realize was slow and clunky. 
+
+Because it was so well designed, YouTube quickly gained a user base, and gradually overcame Google Video.  As we know, Google actually bought YouTube and retired Google Video. 
+
+This all happened because YouTube and Google Video competed on the same playing field, accessed the same Internet, and, in a meritocratic system, consumers saw that YouTube was better.       
+
+But in a world where Google could pay an ISP for “premium” access, Google Video could have secured priority status, leaving YouTube to a second-tier track.  YouTube would have loaded too slowly to win viewers.  We’d be stuck with Google Video. 
+
+Again, what’s at stake here isn’t just what could be taken away.  It’s what could never be created in the first place. 
+
+The Internet has been a tremendous platform for innovation and entrepreneurship.  Guaranteeing its continued success isn’t just about giving consumers better apps… it’s about the economic future of our country. 
+
+Now, I know many of you in the music and entertainment industry are concerned about where net neutrality fits in with your efforts against piracy. 
+
+Having spent much of my life as a writer and entertainer, I own copyrights, too, and I share your concerns. 
+
+But net neutrality is and must be explicitly a matter of protecting lawful content, applications, and usage.  Whether we do it through statute or regulation, ISPs must and will retain the right to combat unlawful usage of the Internet.  Now, how we do that technologically is an enormous question. 
+
+You may remember when Senator Ted Stevens insightfully pointed out that the Internet, quote, “Is not something you just dump something on. It’s not a truck. It’s a series of tubes.”
+
+In making that statement, I think Senator Stevens illustrated why some members of Congress might not be the right people to answer this technological question. 
+
+That’s why it is good news that the FCC is now taking the lead on this battle.
+
+Recently, Chairman Julius Genachowski (whom you’ll hear from later today) announced that the Commission would be issuing pro-net neutrality regulations. 
+
+The Commission rules will emphasize non-discrimination – barring ISPs from discriminating for or against particular Internet content or applications – and transparency, requiring ISPs to be open about their network management practices. 
+
+And he’s right.
+
+An ISP should not be able to prioritize certain traffic over other traffic.  A company cannot pay to have a “fast track” over the Internet.
+ 
+
+And we need to be serious about transparency.  ISPs should have to disclose to consumers any practices that may affect communications between a user and a content, application or service provider.  This ensures that when ISPs do take actions that slow down one content provider and speed up another, users will find out.
+ 
+
+But also, we need to acknowledge that sometimes, it is citizens, and not the government, that are in the best position to protect the Internet.  We need to empower Internet users to file complaints directly with the Federal Communications Commission, and allow them to recover damages in certain cases.
+ 
+
+Finally, and I think the FCC will agree with me on this one, we need to give the experts at the FCC the flexibility they need to solve this complicated problem. 
+So rest assured, even though Senator Stevens is no longer here to lend us his tube expertise, I will be standing ready to work with knowledgeable leaders in Congress—Senator Dorgan, Senator Snowe, Congressman Markey, and Congresswoman Eshoo—to make sure we get it right.
+
+For the first time, it looks like we might actually do this.  The FCC is on board, and so are critical leaders in Congress.
+
+In addition, President Obama has consistently voiced support for net neutrality.  Recently, he put net neutrality at the top of his national innovation agenda.
+
+So although previous efforts to pass net neutrality have failed, we now have both a President and an FCC Chairman who strongly support the cause.
+
+This is not to say that this debate is over, and won.
+
+Some of my colleagues have already introduced legislation to block net neutrality efforts.  And just last week, a Washington Post editorial declared that, quote, “federal regulators should not be telling Internet service providers how to run their businesses,” and net neutrality will, quote, “Micromanage what has been a vibrant and well-functioning marketplace.”
+
+Ignore for a moment the irony that a leading newspaper would come out against a bill whose purpose includes protection of free speech…
+
+And let me say that net neutrality is not a matter of needless government intervention.  It is a necessary response to verifiable instances of ISPs discriminating against users based on the applications they use, and ISPs voicing their support for a separate and unequal Internet. 
+
+It is a twenty-first century reiteration of one of our most important Constitutional rights – the right to free speech. 
+
+And it doesn’t interfere with the free market.  It protects the free market.
+
+A century ago, President Teddy Roosevelt wrote, “Above all else, we must strive to keep the highways of commerce open to all on equal terms.”  He may have been writing in a different time, and addressing different technology, but his purpose is just as relevant today.
+
+Thank you.

@@ -67,3 +67,7 @@ You can reconstruct the density plot using the political-nlp-analysis/src/main/R
 
      generate_histogram.sh <path to ideal_points.csv>
 
+#Contact
+
+If anyone has comments, concerns or criticisms, please let me hear about it at cestella@gmail.com
+

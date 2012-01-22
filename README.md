@@ -9,6 +9,9 @@ The purpose of the project is to take a dataset of around 1400 speeches from Sen
 * Preprocess using a Porter Stemmer and rank the tokenized terms by [Inverse Document Frequency](http://en.wikipedia.org/wiki/Okapi_BM25#IDF_Information_Theoretic_Interpretation)
 * Take the ranked terms and output the terms that are important in the corpus associated with one political orientation but not the others.
 
+The partition of the probability space is detailed here:
+
+![density plot](https://github.com/cestella/CHUG-talk/raw/master/political-nlp-analysis/src/main/R/histogram.png "Density Plot")
 
 #Current Caveats
 * A naive partition based on an even partition of the probability space may be unsuitable.  I didn't know of a better, politically agnostic way to do this.

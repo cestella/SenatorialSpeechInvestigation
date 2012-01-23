@@ -35,6 +35,10 @@ public class KeyTest extends TestCase
         return new TestSuite( KeyTest.class );
     }
     
+    /**
+     * Verifies that the total order is correct.
+     * @throws Exception
+     */
     public void testSort() throws Exception
     {
     	MapKey key1 = new MapKey("d", 1);
@@ -60,10 +64,13 @@ public class KeyTest extends TestCase
     {
     	String[] terms = new String[] { "term", "term2", "" };
     	int[] documentIds = new int[] { -1, 1, 2 };
+    	//iterate over the matrix comparing each key to each other.
+    	//this gives us the ability to test symmetry and reflexivity.
     	for(int i = 0;i < terms.length;++i)
     	{
     		for(int j = 0;j < terms.length;++j)
     		{
+    			
     			MapKey key1 = new MapKey(terms[i], documentIds[i]);
     			MapKey key2 = new MapKey(terms[j], documentIds[j]);
     			assertEquals(key1, key1);
@@ -92,6 +99,10 @@ public class KeyTest extends TestCase
     	
     }
     
+    /**
+     * Verify that we can serialize and deserialize the keys
+     * @throws Exception
+     */
     public void testPersistence() throws Exception
     {
     	MapKey key = null;

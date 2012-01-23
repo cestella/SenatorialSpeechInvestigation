@@ -8,6 +8,12 @@ import org.apache.hadoop.io.WritableComparable;
 
 import com.google.common.collect.ComparisonChain;
 
+/**
+ * This is the key emitted from the AnalysisJob.  It binds a term and document ID
+ * since we need to keep count of documents which contained a term.
+ * @author casey.stella
+ *
+ */
 public class MapKey implements WritableComparable<MapKey> 
 {
 	private String term;

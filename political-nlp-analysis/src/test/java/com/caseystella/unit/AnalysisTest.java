@@ -51,6 +51,10 @@ public class AnalysisTest extends TestCase {
         return new TestSuite( AnalysisTest.class );
     }
     
+    /**
+     * Test just the map phase
+     * @throws Exception
+     */
     public void testMapper() throws Exception
     {
     	AnalysisJob.Mapper mapper = new AnalysisJob.Mapper()
@@ -61,6 +65,8 @@ public class AnalysisTest extends TestCase {
     			return ImmutableSet.of("the", "a", "is", "in");
     		}
     	};
+    	
+    	//Mock out the OutputCollector with one which just updates my list of key/value pairs.
     	
     	final List<SimpleImmutableEntry<MapKey, Text>> mapOutput = new ArrayList<SimpleImmutableEntry<MapKey, Text>>();
     	mapper.map( new LongWritable(0)
@@ -76,7 +82,7 @@ public class AnalysisTest extends TestCase {
 					}
     			  , null
     			  );
-    	
+    	//verify the output given the input.
     	assertEquals(mapOutput.get(0).getKey().getDocumentId(), 100);
     	assertEquals(mapOutput.get(0).getKey().getTerm(), "cat");
     	assertEquals(mapOutput.get(1).getKey().getDocumentId(), 100);
@@ -100,6 +106,10 @@ public class AnalysisTest extends TestCase {
 	   			   );
     }
     
+    /**
+     * Test the map and the reduce cycle completely
+     * @throws Exception
+     */
     public void testMapReduce() throws Exception
     {
     	String[] documents 
@@ -114,12 +124,14 @@ public class AnalysisTest extends TestCase {
 							    			return  ImmutableSet.of("the", "a", "is", "in", "like");
 							    		}
 							    	};
+		//this is a tree-backed multimap with a compare function derived from the map keys.
+	    //this is doing the sort phase under the hood.
     	final ListMultimap<MapKey, Text> mapOutput = newMultimap();
 					
     	{
     		final ListMultimap<MapKey, Text> intermediateOutput = newMultimap();
     		
-	    	
+	    	//same trick as in the testMapper() case
 	    	OutputCollector<MapKey, Text> collector = 
 	    			new OutputCollector<MapKey, Text>() 
     			  	{
@@ -160,11 +172,14 @@ public class AnalysisTest extends TestCase {
 	    					   , null
 	    					   );
 	    	}
-	    	//after the combiner, this gets reduced to 2
+	    	//after the combiner, this gets reduced to 2 if the combiner does its job
 	    	assertEquals(2, mapOutput.get(new MapKey("cat", 2)).size());
     	}
     	final Map<String, Object[]> reducerOutput = new HashMap<String, Object[]>();
     	
+    	/*
+    	 * Now inject the total number of documents so that the IDF is computable.
+    	 */
     	AnalysisJob.Reducer reducer = new AnalysisJob.Reducer()
 								    	{
 								    		@Override
@@ -173,7 +188,10 @@ public class AnalysisTest extends TestCase {
 								    		}
 								    	};
     	{
-    		
+    		/*
+    		 * Now just pass it through the reducer and collect it just like we did in the mapper test.
+    		 * We want to key it on the lemmatized term and verify properties on individual terms.
+    		 */
     		for(Entry<MapKey, Collection<Text> > kvp : mapOutput.asMap().entrySet())
 	    	{
     			reducer.reduce( kvp.getKey()
@@ -203,9 +221,12 @@ public class AnalysisTest extends TestCase {
     						  );
 	    	}
     		
+    		//verify everything went as expected.
     		assertEquals(NLPUtil.INSTANCE.IDF(3, 2), reducerOutput.get("cat")[0]);
     		assertEquals(Lists.newArrayList("cats", "cat"), (List<String>)reducerOutput.get("cat")[1]);
     		assertEquals(NLPUtil.INSTANCE.IDF(3, 1), reducerOutput.get("brain")[0]);
+    		
+    		//Easy, Peasy, Lemon Squeezy!
     	}
     	
     }

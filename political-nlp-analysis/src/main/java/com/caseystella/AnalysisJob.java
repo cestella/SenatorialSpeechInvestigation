@@ -35,11 +35,25 @@ import com.google.common.base.Joiner;
 import com.google.common.io.Files;
 import com.google.common.io.LineProcessor;
 
+/**
+ * This is the map reduce driver that takes a corpus of documents and
+ * outputs a set of normalized, lemmatized tokens, the Inverse Document Frequency
+ * of each token and the words which mapped to that token.
+ * 
+ * @author casey.stella
+ *
+ */
 public class AnalysisJob 
 {
 	public static String PARAM_TOTAL_NUM_DOCS = "totalNumDocs";
 	public static String PARAM_STOPWORDS = "stopwords";
 	
+	/**
+	 * This is the mapper. The input is a document and the output is a set of keys and the word associated with the key.
+	 * The key contains the lemmatization of the word and the document ID.
+	 * @author casey.stella
+	 *
+	 */
 	public static class Mapper extends MapReduceBase 
 							  implements org.apache.hadoop.mapred.Mapper<LongWritable, Text, MapKey, Text>
 	{
@@ -87,6 +101,12 @@ public class AnalysisJob
 		
 	}
 	
+	/**
+	 * We just aggregate and emit unique values to associated with a key (so there are no repeats).
+	 * 
+	 * @author casey.stella
+	 *
+	 */
 	public static class Combiner extends MapReduceBase
 								 implements org.apache.hadoop.mapred.Reducer<MapKey, Text, MapKey, Text>
 	{
@@ -109,6 +129,11 @@ public class AnalysisJob
 		
 	}
 	
+	/**
+	 * Partition based on the token, sending all keys with the same token to the reducer.
+	 * @author casey.stella
+	 *
+	 */
 	public static class Partitioner extends MapReduceBase implements org.apache.hadoop.mapred.Partitioner<MapKey, Text>
 	{
 
@@ -120,6 +145,14 @@ public class AnalysisJob
 		
 	}
 	
+	/**
+	 * This takes the keys and word sets, computes the total number of keys with the same term (they'll come in sorted, so this
+	 * is done via local aggregation) and uses this to compute the IDF.  The output of this job is the IDF along with
+	 * a textual representation of the lemmatized term and the set of unique words which mapped to it.
+	 * 
+	 * @author casey.stella
+	 *
+	 */
 	public static class Reducer extends MapReduceBase
 								implements org.apache.hadoop.mapred.Reducer<MapKey, Text,  DoubleWritable, Text>
 	{

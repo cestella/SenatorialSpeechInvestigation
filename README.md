@@ -1,3 +1,4 @@
+If you came here from the CHUG, you might want to see the slide deck [here](https://github.com/cestella/SenatorialSpeechInvestigation/raw/master/political-nlp-analysis/src/main/latex/CHUG_presentation.pdf)
 #Introduction
 This is an illustrative project intended to demonstrate a simple, yet not quite as simple as Word Count, NLP algorithm implemented in Hadoop Map Reduce.  This is also intended to demonstrate my opinions on unit testing Map Reduce jobs.
 

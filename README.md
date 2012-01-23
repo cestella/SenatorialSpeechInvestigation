@@ -12,7 +12,7 @@ The purpose of the project is to take a dataset of around 1400 speeches from Sen
 ##Partition
 The partition of the probability space is split into even thirds as can be seen here:
 
-![density plot](https://github.com/cestella/CHUG-talk/raw/master/political-nlp-analysis/src/main/R/histogram.png "Density Plot")
+![density plot](https://github.com/cestella/SenatorialSpeechInvestigation/raw/master/political-nlp-analysis/src/main/R/histogram.png "Density Plot")
 
 
 ##Output
